@@ -47,3 +47,9 @@ func RandDate() time.Time {
 	end, _ := time.Parse("2006-01-02 15:04:05", "2020-01-01 00:00:00")
 	return time.Unix(randInt64(begin.Unix(), end.Unix()), 0)
 }
+//年龄大于12岁
+func RandDateAge() time.Time {
+	begin, _ := time.Parse("2006-01-02 15:04:05", "1970-01-01 00:00:00")
+	end, _ := time.Parse("2006-01-02 15:04:05", "2010-01-01 00:00:00")
+	return time.Unix(randInt64(begin.Unix(), end.Unix()), 0)
+}
